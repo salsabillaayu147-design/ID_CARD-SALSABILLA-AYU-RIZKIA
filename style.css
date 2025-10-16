@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  background: radial-gradient(circle at top, #2b1d1d 0%, #1a1410 80%);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+  padding: 60px 0;
+}
+
+.id-card {
+  background: linear-gradient(145deg, #241a14, #1b120d);
+  border-radius: 25px;
+  overflow: hidden;
+  width: 380px;
+  margin: 40px 0;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7),
+              0 0 30px rgba(212, 175, 55, 0.05);
+  border: 1px solid #3a2a1f;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.id-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8),
+              0 0 35px rgba(212, 175, 55, 0.15);
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 40px 20px 30px;
+  background: linear-gradient(145deg, #2a1f18, #1b120c);
+  color: white;
+  border-bottom: 1px solid #3a2a1f;
+}
+
+.profile-photo {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.profile-photo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #d4af37;
+  object-fit: cover;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+  position: relative;
+  z-index: 2;
+}
+
+/* ✨ Cahaya berdenyut lembut */
+.photo-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212,175,55,0.35) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  filter: blur(12px);
+  animation: pulse 3s infinite ease-in-out;
+  z-index: 1;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.15); }
+  100% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
+}
+
+h2 {
+  font-size: 22px;
+  margin: 10px 0 5px;
+  font-weight: 600;
+  color: #f8e7c0;
+}
+
+.title {
+  font-size: 14px;
+  color: #d4af37;
+  opacity: 0.9;
+}
+
+/* CONTENT */
+.content {
+  background: linear-gradient(180deg, #3b2f2f 0%, #2b1d1d 100%);
+  padding: 25px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  color: #f8e7c0;
+  box-shadow: inset 0 3px 15px rgba(212, 175, 55, 0.2),
+              0 -3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.section {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section h3 {
+  color: #d4af37;
+  font-size: 18px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.section h3::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #d4af37;
+  margin: 5px auto 0;
+  border-radius: 2px;
+}
+
+.desc {
+  font-size: 14px;
+  background: linear-gradient(145deg, #4a3a2e, #3a2c23);
+  border-radius: 12px;
+  padding: 12px 15px;
+  color: #f8e7c0;
+  box-shadow: inset 0 0 8px rgba(212, 175, 55, 0.15),
+              0 0 10px rgba(0, 0, 0, 0.4);
+  line-height: 1.6;
+}
+
+/* SKILL */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.skills span {
+  background: linear-gradient(145deg, #4a3a2e, #3a2c23);
+  color: #d4af37;
+  padding: 8px 14px;
+  border-radius: 25px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 3px 10px rgba(212, 175, 55, 0.15);
+  transition: all 0.3s ease;
+}
+
+.skills span:hover {
+  background: #5c4838;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+  padding: 20px 0 25px;
+  background: #1b120d;
+  border-top: 1px solid #3a2a1f;
+}
+
+.contact a {
+  margin: 0 10px;
+  font-size: 28px;
+  transition: 0.3s;
+}
+
+/* 🎨 Warna khas tiap platform */
+.contact a.whatsapp {
+  color: #25D366;
+}
+
+.contact a.tiktok {
+  color: #69C9D0;
+  text-shadow: 1px 1px 4px #EE1D52;
+}
+
+.contact a.instagram {
+  background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 💫 Hover efek */
+.contact a:hover {
+  transform: scale(1.2);
+  filter: brightness(1.3);
+}
+
+
+
+
+
+
+
+
